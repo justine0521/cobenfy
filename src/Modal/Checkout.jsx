@@ -142,15 +142,7 @@ function Checkout({ onClose }) {
           </div>
         </div>
 
-        <button
-          className={`w-full py-3 rounded-md font-semibold text-lg transition duration-200 ${
-            signatureConfirmed && isCheckboxChecked
-              ? 'bg-black text-white cursor-pointer hover:bg-gray-900'
-              : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-          }`}
-          disabled={!(signatureConfirmed && isCheckboxChecked)}
-          onClick={handleSave}
-        >
+        <button className={`w-full py-3 rounded-md font-semibold text-lg transition duration-200 ${ signatureConfirmed && isCheckboxChecked ? 'bg-black text-white cursor-pointer hover:bg-gray-900' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`} disabled={!(signatureConfirmed && isCheckboxChecked)} onClick={handleSave}>
           Save
         </button>
       </div>
