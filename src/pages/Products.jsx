@@ -17,9 +17,9 @@ import SamplePacks2 from '../image/Sample-Packs-2.png';
 import SamplePacks3 from '../image/Sample-Packs-3.png';
 import SamplePacks4 from '../image/Sample-Packs-4.png';
 import SamplePacks5 from '../image/Sample-Packs-5.png';
-import StarterKit1 from '../image/Starter-Kit-1.png';
-import StarterKit2 from '../image/Starter-Kit-2.png';   
-import StarterKit3 from '../image/Starter-Kit-3.png';
+import StarterKit1 from '../image/Starter-kit-1.png';
+import StarterKit2 from '../image/Starter-kit-2.png';   
+import StarterKit3 from '../image/Starter-kit-3.png';
 import Checkout from '../Modal/Checkout';
 
 const sampleProducts = [
