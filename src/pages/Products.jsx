@@ -4,41 +4,41 @@ import { IoSearch } from "react-icons/io5";
 import { TiShoppingCart } from "react-icons/ti";
 import { FaSearch, FaArrowLeft, FaTimes } from 'react-icons/fa';
 
-import Bottles1 from '../image/Bottles-1.png';
-import Bottles2 from '../image/Bottles-2.png';  
-import Capsule1 from '../image/Capsule-1.png';
-import Capsule2 from '../image/Capsule-2.png';
-import Capsule3 from '../image/Capsule-3.png';
-import Capsule4 from '../image/Capsule-4.png';
-import Capsule5 from '../image/Capsule-5.png';  
-import Capsule6 from '../image/Capsule-6.png';
-import SamplePacks1 from '../image/Sample-Packs-1.png';
-import SamplePacks2 from '../image/Sample-Packs-2.png';
-import SamplePacks3 from '../image/Sample-Packs-3.png';
-import SamplePacks4 from '../image/Sample-Packs-4.png';
-import SamplePacks5 from '../image/Sample-Packs-5.png';
+// import Bottles1 from '../image/Bottles-1.png';
+// import Bottles2 from '../image/Bottles-2.png';  
+// import Capsule1 from '../image/Capsule-1.png';
+// import Capsule2 from '../image/Capsule-2.png';
+// import Capsule3 from '../image/Capsule-3.png';
+// import Capsule4 from '../image/Capsule-4.png';
+// import Capsule5 from '../image/Capsule-5.png';  
+// import Capsule6 from '../image/Capsule-6.png';
+// import SamplePacks1 from '../image/Sample-Packs-1.png';
+// import SamplePacks2 from '../image/Sample-Packs-2.png';
+// import SamplePacks3 from '../image/Sample-Packs-3.png';
+// import SamplePacks4 from '../image/Sample-Packs-4.png';
+// import SamplePacks5 from '../image/Sample-Packs-5.png';
 // import StarterKit1 from '../image/Starter-Kit-1.png';
-import StarterKit2 from '../image/Starter-Kit-2.png';   
-import StarterKit3 from '../image/Starter-Kit-3.png';
+// import StarterKit2 from '../image/Starter-Kit-2.png';   
+// import StarterKit3 from '../image/Starter-Kit-3.png';
 import Checkout from '../Modal/Checkout';
 
 const sampleProducts = [
-  { id: 1, name: 'COBENFY', image: SamplePacks1, category: 'Sample Packs' },
-  { id: 2, name: 'COBENFY', image: SamplePacks2, category: 'Sample Packs' },
-  { id: 3, name: 'COBENFY', image: SamplePacks3, category: 'Sample Packs' },
-  { id: 4, name: 'COBENFY', image: SamplePacks4, category: 'Sample Packs' },
-  { id: 5, name: 'COBENFY', image: SamplePacks5, category: 'Sample Packs' },
+  // { id: 1, name: 'COBENFY', image: SamplePacks1, category: 'Sample Packs' },
+  // { id: 2, name: 'COBENFY', image: SamplePacks2, category: 'Sample Packs' },
+  // { id: 3, name: 'COBENFY', image: SamplePacks3, category: 'Sample Packs' },
+  // { id: 4, name: 'COBENFY', image: SamplePacks4, category: 'Sample Packs' },
+  // { id: 5, name: 'COBENFY', image: SamplePacks5, category: 'Sample Packs' },
   // { id: 6, name: 'COBENFY', image: StarterKit1, category: 'Starter Kit' },
-  { id: 7, name: 'COBENFY', image: StarterKit2, category: 'Starter Kit' },
-  { id: 8, name: 'COBENFY', image: StarterKit3, category: 'Starter Kit' },
-  { id: 9, name: 'COBENFY', image: Bottles1, category: 'Bottles' },
-  { id: 10, name: 'COBENFY', image: Bottles2, category: 'Bottles' },
-  { id: 11, name: 'COBENFY', image: Capsule1, category: 'Capsule' },
-  { id: 12, name: 'COBENFY', image: Capsule2, category: 'Capsule' },
-  { id: 13, name: 'COBENFY', image: Capsule3, category: 'Capsule' },
-  { id: 14, name: 'COBENFY', image: Capsule4, category: 'Capsule' },
-  { id: 15, name: 'COBENFY', image: Capsule5, category: 'Capsule' },
-  { id: 16, name: 'COBENFY', image: Capsule6, category: 'Capsule' },
+  // { id: 7, name: 'COBENFY', image: StarterKit2, category: 'Starter Kit' },
+  // { id: 8, name: 'COBENFY', image: StarterKit3, category: 'Starter Kit' },
+  // { id: 9, name: 'COBENFY', image: Bottles1, category: 'Bottles' },
+  // { id: 10, name: 'COBENFY', image: Bottles2, category: 'Bottles' },
+  // { id: 11, name: 'COBENFY', image: Capsule1, category: 'Capsule' },
+  // { id: 12, name: 'COBENFY', image: Capsule2, category: 'Capsule' },
+  // { id: 13, name: 'COBENFY', image: Capsule3, category: 'Capsule' },
+  // { id: 14, name: 'COBENFY', image: Capsule4, category: 'Capsule' },
+  // { id: 15, name: 'COBENFY', image: Capsule5, category: 'Capsule' },
+  // { id: 16, name: 'COBENFY', image: Capsule6, category: 'Capsule' },
 ];
 
 function Products() {
