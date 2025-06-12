@@ -129,66 +129,66 @@ function Products() {
   };
 
   const CartModal = () => (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-lg w-full max-w-2xl m-4 relative">
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-[#1F22A2]">Shopping Cart</h2>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl shadow-xl w-full max-w-2xl m-4 relative">
+        <div className="p-8">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-2xl font-semibold text-gray-800 font-montserrat">Shopping Cart</h2>
             <button 
               onClick={() => setShowCartModal(false)}
-              className="text-gray-500 hover:text-[#BE0075] transition-colors"
+              className="text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <FaTimes size={24} />
+              <FaTimes size={20} />
             </button>
           </div>
 
           {cart.length === 0 ? (
-            <p className="text-center text-gray-500 py-8">Your cart is empty</p>
+            <p className="text-center text-gray-500 py-12 font-montserrat">Your cart is empty</p>
           ) : (
             <>
-              <div className="space-y-4 max-h-[60vh] overflow-y-auto">
+              <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
                 {cart.map(item => (
-                  <div key={item.id} className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
-                    <img src={item.image} alt={item.name} className="w-20 h-20 object-contain" />
+                  <div key={item.id} className="flex items-center gap-6 p-4 bg-gray-50/50 rounded-xl hover:bg-gray-50 transition-colors">
+                    <img src={item.image} alt={item.name} className="w-24 h-24 object-contain" />
                     <div className="flex-grow">
-                      <h3 className="font-semibold text-[#1F22A2]">{item.name}</h3>
-                      <p className="text-sm text-gray-600">{item.category}</p>
+                      <h3 className="font-medium text-gray-800 font-montserrat">{item.name}</h3>
+                      <p className="text-sm text-gray-500 font-montserrat">{item.category}</p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-3">
                       <button 
                         onClick={() => handleUpdateCartQuantity(item.id, -1)}
-                        className="w-8 h-8 flex items-center justify-center text-lg font-semibold text-[#BE0075] hover:bg-[#BE0075]/10 rounded-full transition-all"
+                        className="w-8 h-8 flex items-center justify-center text-lg font-medium text-gray-600 hover:bg-gray-100 rounded-full transition-all"
                       >
                         −
                       </button>
-                      <span className="w-8 text-center font-medium">{item.quantity}</span>
+                      <span className="w-8 text-center font-medium text-gray-800 font-montserrat">{item.quantity}</span>
                       <button 
                         onClick={() => handleUpdateCartQuantity(item.id, 1)}
-                        className="w-8 h-8 flex items-center justify-center text-lg font-semibold text-[#BE0075] hover:bg-[#BE0075]/10 rounded-full transition-all"
+                        className="w-8 h-8 flex items-center justify-center text-lg font-medium text-gray-600 hover:bg-gray-100 rounded-full transition-all"
                       >
                         +
                       </button>
                     </div>
                     <button 
                       onClick={() => handleRemoveFromCart(item.id)}
-                      className="text-red-500 hover:text-red-700 transition-colors"
+                      className="text-gray-400 hover:text-red-500 transition-colors"
                     >
-                      <FaTimes />
+                      <FaTimes size={16} />
                     </button>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 pt-6 border-t">
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-lg font-semibold">Total Items:</span>
-                  <span className="text-lg font-bold text-[#1F22A2]">{totalCartItems}</span>
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-lg font-medium text-gray-800 font-montserrat">Total Items:</span>
+                  <span className="text-lg font-semibold text-gray-800 font-montserrat">{totalCartItems}</span>
                 </div>
                 <button 
                   onClick={() => {
                     setShowCartModal(false);
                     setShowModal(true);
                   }}
-                  className="w-full bg-[#BE0075] text-white py-3 rounded-xl font-semibold hover:bg-[#BE0075]/90 transition-colors"
+                  className="w-full bg-gray-900 text-white py-3.5 rounded-xl font-medium hover:bg-gray-800 transition-colors font-montserrat"
                 >
                   Proceed to Checkout
                 </button>
@@ -201,10 +201,10 @@ function Products() {
   );
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#F0F4FF] via-white to-[#FFE3F2] py-12 px-6 relative">
+    <section className="min-h-screen bg-white py-12 px-6 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-6 flex items-center justify-between">
-          <NavLink to="/" className="inline-flex items-center text-[#1F22A2] hover:text-[#BE0075] font-medium text-base transition-all">
+        <div className="mb-8 flex items-center justify-between">
+          <NavLink to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 font-medium text-sm transition-all font-montserrat">
             <FaArrowLeft className="mr-2" /> Back
           </NavLink>
 
@@ -212,28 +212,42 @@ function Products() {
             onClick={() => setShowCartModal(true)}
             className="relative cursor-pointer"
           >
-            <TiShoppingCart className="text-3xl text-[#BE0075]" />
-            <span className="absolute -top-1 -right-1 bg-gray-800 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full shadow-sm">
+            <TiShoppingCart className="text-3xl text-gray-800" />
+            <span className="absolute -top-1 -right-1 bg-gray-900 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full font-montserrat">
               {totalCartItems}
             </span>
           </button>
         </div>
 
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#1F22A2] tracking-tight">Conbenfy Products</h1>
-          <p className="mt-2 text-lg text-neutral-600">Welcome to Conbenfy Product Vending Machine</p>
+          <h1 className="text-4xl sm:text-5xl font-semibold text-primary tracking-tight font-montserrat">Conbenfy Products</h1>
+          <p className="mt-3 text-lg text-gray-500 font-montserrat">Welcome to Conbenfy Product Vending Machine</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 ">
-          <div className="lg:col-span-3">
-            <div className="relative mb-4">
-              <FaSearch className="absolute top-3.5 left-4 text-[#BE0075]" />
-              <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search products..." className="w-full pl-12 pr-5 py-3 rounded-xl border border-[#D1D5DB] shadow-md text-[#1F22A2] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#BE0075]/50 transition-all"/>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-8 order-2 lg:order-1">
+            <div className="relative mb-6">
+              <FaSearch className="absolute top-4 left-4 text-gray-400" />
+              <input 
+                type="text" 
+                value={search} 
+                onChange={(e) => setSearch(e.target.value)} 
+                placeholder="Search products..." 
+                className="w-full pl-12 pr-5 py-3.5 rounded-xl border border-gray-300 shadow-sm text-gray-800 placeholder-primary focus:outline-none focus:ring-2 focus:ring-gray-200 transition-all font-montserrat"
+              />
             </div>
 
             <div className="flex flex-wrap gap-2 mb-8">
               {categories.map(cat => (
-                <button key={cat} onClick={() => setSelectedCategory(cat)} className={`px-4 py-2 rounded-full border text-sm font-medium transition-all ${selectedCategory === cat ? 'bg-[#BE0075] text-white' : 'border-[#BE0075] text-[#BE0075] hover:bg-[#BE0075]/10'}`} >
+                <button 
+                  key={cat} 
+                  onClick={() => setSelectedCategory(cat)} 
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all font-montserrat ${
+                    selectedCategory === cat 
+                      ? 'bg-primary text-white' 
+                      : 'bg-gray-200 text-gray-00 hover:bg-gray-100'
+                  }`}
+                >
                   {cat}
                 </button>
               ))}
@@ -242,67 +256,103 @@ function Products() {
             <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
               {filteredProducts.length > 0 ? (
                 filteredProducts.map(product => (
-                  <div key={product.id} className="bg-white/70 backdrop-blur-lg border border-[#E0E0E0] rounded-3xl p-5">
+                  <div key={product.id} className="bg-white border rounded-2xl p-6 transition-all">
                     <div className="rounded-xl overflow-hidden mb-4">
                       <img src={product.image} alt={product.name} className="w-full h-48 object-contain hover:scale-105 transition-transform duration-300" />
                     </div>
 
-                    <h3 className="text-xl font-bold text-primary mb-2">{product.name}</h3>
+                    <h3 className="text-lg font-medium text-gray-800 mb-2 font-montserrat">{product.name}</h3>
 
                     <div className="flex items-center justify-between mt-4">
-                      <label className="text-sm font-medium text-[#BE0075]">Quantity</label>
+                      <label className="text-sm font-medium text-gray-600 font-montserrat">Quantity</label>
 
-                      <div className="flex items-center space-x-1 bg-white border border-gray-300 rounded-lg">
-                        <button type="button" onClick={() => handleQuantityChange(product.id, -1)} className="w-8 h-8 flex items-center justify-center text-lg font-semibold text-[#BE0075] hover:bg-[#BE0075]/10 transition-all">−</button>
-                        <span className="text-sm font-semibold text-gray-800 w-6 text-center">{quantities[product.id] || 1}</span>
-                        <button type="button" onClick={() => handleQuantityChange(product.id, 1)} className="w-8 h-8 flex items-center justify-center text-lg font-semibold text-[#BE0075] hover:bg-[#BE0075]/10 transition-all">+</button>
+                      <div className="flex items-center space-x-1 bg-gray-50 rounded-lg">
+                        <button  type="button"  onClick={() => handleQuantityChange(product.id, -1)}  className="w-8 h-8 flex items-center justify-center text-lg font-medium text-gray-600 hover:bg-gray-100 transition-all">
+                          −
+                        </button>
+
+                        <span className="text-sm font-medium text-gray-800 w-6 text-center font-montserrat">{quantities[product.id] || 1}</span>
+                        
+                        <button  type="button"  onClick={() => handleQuantityChange(product.id, 1)}  className="w-8 h-8 flex items-center justify-center text-lg font-medium text-gray-600 hover:bg-gray-100 transition-all" >
+                          +
+                        </button>
                       </div>
                     </div>
 
-                    <button onClick={() => handleAddToCart(product)} className="mt-4 w-full bg-primary text-white py-2 rounded-full font-semibold transition-all hover:bg-primary/90">
+                    <button  onClick={() => handleAddToCart(product)}  className="mt-4 w-full bg-primary text-white py-3 rounded-xl font-medium hover:bg-opacity-80 transition-colors font-montserrat">
                       Add to cart
                     </button>
                   </div>
                 ))
               ) : (
-                <p className="col-span-full text-center text-[#BE0075] text-lg font-medium">No products found.</p>
+                <p className="col-span-full text-center text-gray-500 text-lg font-medium font-montserrat">No products found.</p>
               )}
             </div>
           </div>
 
-          <div className="lg:col-span-1 h-fit bg-white/70 p-6 rounded-3xl shadow-md border-2 border-[#E0E0E0]">
-            <h2 className="text-xl font-bold text-[#1F22A2] mb-4">Information</h2>
+          <div className="lg:col-span-4 h-fit lg:sticky top-0 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 order-1 lg:order-2">
+            <h2 className="text-xl font-semibold text-gray-800 mb-6 font-montserrat">Information</h2>
             
-            <form onSubmit={handleCheckout} className="space-y-4">
+            <form onSubmit={handleCheckout} className="space-y-5">
               <div className="w-full">
                 <div className="relative">
-                  <input type="text" value={formData.npi} onChange={(e) => handleInputChange('npi', e.target.value)} placeholder="NPI Number" className={`w-full pl-10 pr-3 py-2 rounded-xl border-2 ${errors.npi ? 'border-red-500' : 'border-[#E0E0E0]' } outline-none focus:border-primary`} />
+                  <input 
+                    type="text" 
+                    value={formData.npi} 
+                    onChange={(e) => handleInputChange('npi', e.target.value)} 
+                    placeholder="NPI Number" 
+                    className={`w-full pl-10 pr-3 py-3 rounded-xl border-2 ${
+                      errors.npi ? 'border-red-500' : 'border-gray-200'
+                    } outline-none focus:border-gray-300 transition-all font-montserrat`} 
+                  />
                   <IoSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 </div>
-
-                {errors.npi && <p className="text-red-500 text-sm mt-1">{errors.npi}</p>}
+                {errors.npi && <p className="text-red-500 text-sm mt-1 font-montserrat">{errors.npi}</p>}
               </div>
 
               <div>
-                <input type="text" value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} placeholder="Name" className={`w-full px-3 py-2 rounded-xl border-2 ${errors.name ? 'border-red-500' : 'border-[#E0E0E0]'} outline-none focus:border-primary`}/>
-                
-                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                <input 
+                  type="text" 
+                  value={formData.name} 
+                  onChange={(e) => handleInputChange('name', e.target.value)} 
+                  placeholder="Name" 
+                  className={`w-full px-3 py-3 rounded-xl border-2 ${
+                    errors.name ? 'border-red-500' : 'border-gray-200'
+                  } outline-none focus:border-gray-300 transition-all font-montserrat`}
+                />
+                {errors.name && <p className="text-red-500 text-sm mt-1 font-montserrat">{errors.name}</p>}
               </div>
 
               <div>
-                <textarea value={formData.address} onChange={(e) => handleInputChange('address', e.target.value)} placeholder="Address" className={`w-full px-3 py-2 rounded-xl border-2 ${errors.address ? 'border-red-500' : 'border-[#E0E0E0]'} outline-none focus:border-primary`} />
-                
-                {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
+                <textarea 
+                  value={formData.address} 
+                  onChange={(e) => handleInputChange('address', e.target.value)} 
+                  placeholder="Address" 
+                  className={`w-full px-3 py-3 rounded-xl border-2 ${
+                    errors.address ? 'border-red-500' : 'border-gray-200'
+                  } outline-none focus:border-gray-300 transition-all font-montserrat`} 
+                />
+                {errors.address && <p className="text-red-500 text-sm mt-1 font-montserrat">{errors.address}</p>}
               </div>
 
               <div>
-                <input type="email" value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} placeholder="Email (Optional)" className={`w-full px-3 py-2 rounded-xl border-2 ${errors.email ? 'border-red-500' : 'border-[#E0E0E0]'} outline-none focus:border-primary`}/>
-                
-                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                <input 
+                  type="email" 
+                  value={formData.email} 
+                  onChange={(e) => handleInputChange('email', e.target.value)} 
+                  placeholder="Email (Optional)" 
+                  className={`w-full px-3 py-3 rounded-xl border-2 ${
+                    errors.email ? 'border-red-500' : 'border-gray-200'
+                  } outline-none focus:border-gray-300 transition-all font-montserrat`}
+                />
+                {errors.email && <p className="text-red-500 text-sm mt-1 font-montserrat">{errors.email}</p>}
               </div>
 
-              <button type="submit" className="w-full bg-primary text-white py-2 rounded-xl font-semibold hover:bg-primary/90">
-                Checkout
+              <button 
+                type="submit" 
+                className="w-full bg-primary text-white py-3.5 rounded-xl font-medium hover:bg-opacity-80 transition-colors font-montserrat"
+              >
+                Proceed to Checkout
               </button>
             </form>
           </div>
@@ -310,8 +360,8 @@ function Products() {
       </div>
 
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl shadow-lg w-full max-w-3xl m-10 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-3xl m-10 relative">
             <Checkout formData={formData} cart={cart} onClose={() => setShowModal(false)} />
           </div>
         </div>

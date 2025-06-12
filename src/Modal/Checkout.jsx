@@ -99,7 +99,7 @@ function Checkout({ onClose }) {
               <SignatureCanvas
                 ref={sigCanvasRef}
                 penColor="black"
-                canvasProps={{ width: 600, height: 110, className: "signature-canvas" }}
+                canvasProps={{ width: 700, height: 110, className: "signature-canvas" }}
                 backgroundColor="#f9fafb"
               />
             </div>
