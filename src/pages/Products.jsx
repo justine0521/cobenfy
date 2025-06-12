@@ -17,7 +17,7 @@ import SamplePacks2 from '../image/Sample-Packs-2.png';
 import SamplePacks3 from '../image/Sample-Packs-3.png';
 import SamplePacks4 from '../image/Sample-Packs-4.png';
 import SamplePacks5 from '../image/Sample-Packs-5.png';
-import StarterKit1 from '../image/Starter-Kit-1.png';
+// import StarterKit1 from '../image/Starter-Kit-1.png';
 import StarterKit2 from '../image/Starter-Kit-2.png';   
 import StarterKit3 from '../image/Starter-Kit-3.png';
 import Checkout from '../Modal/Checkout';
@@ -28,7 +28,7 @@ const sampleProducts = [
   { id: 3, name: 'COBENFY', image: SamplePacks3, category: 'Sample Packs' },
   { id: 4, name: 'COBENFY', image: SamplePacks4, category: 'Sample Packs' },
   { id: 5, name: 'COBENFY', image: SamplePacks5, category: 'Sample Packs' },
-  { id: 6, name: 'COBENFY', image: StarterKit1, category: 'Starter Kit' },
+  // { id: 6, name: 'COBENFY', image: StarterKit1, category: 'Starter Kit' },
   { id: 7, name: 'COBENFY', image: StarterKit2, category: 'Starter Kit' },
   { id: 8, name: 'COBENFY', image: StarterKit3, category: 'Starter Kit' },
   { id: 9, name: 'COBENFY', image: Bottles1, category: 'Bottles' },
