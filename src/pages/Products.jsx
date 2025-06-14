@@ -160,7 +160,7 @@ function Products() {
             <div className="md:p-8 p-4">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-2 h-8 bg-gradient-to-b from-primary to-primary/60 rounded-full"></div>
-                <h2 className="text-lg font-semibold text-black font-montserrat">Request Summary</h2>
+                <h2 className="text-lg font-semibold text-black font-montserrat">DTP Request Summary</h2>
               </div>
 
               {Object.entries(cartQuantities).length === 0 ? (
