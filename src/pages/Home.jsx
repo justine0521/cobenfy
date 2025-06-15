@@ -7,7 +7,7 @@ import Bottles from "../image/Bottles-1-no-bg.png"
 
 function Home() {
   return (
-    <section className="h-screen w-full font-Montserrat overflow-y-auto bg-primary text-white relative">
+    <section className="h-screen w-full font-Montserrat lg:overflow-hidden overflow-y-auto bg-primary text-white relative">
 
       {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -48,7 +48,7 @@ function Home() {
               </div>
 
               {/* Enhanced action section */}
-              <div className="flex flex-col  items-center gap-6 pt-4">
+              <div className="flex flex-col md:items-left  gap-6 pt-4">
                 <NavLink to={'/products'}>
                   <button className="group inline-flex items-center gap-4 font-semibold text-lg px-8 py-4 bg-white text-primary rounded-full shadow-2xl hover:shadow-3xl transform transition-all duration-300">
                     <span>See Products</span>
