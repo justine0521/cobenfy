@@ -96,7 +96,7 @@ function Products() {
           <p className="mt-3 text-lg text-gray-500 font-montserrat">Welcome to Cobenfy Product Vending Machine</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-8 order-2 lg:order-1">
             <div className="relative mb-6">
               <FaSearch className="absolute top-4 left-4 text-gray-400" />
@@ -157,7 +157,7 @@ function Products() {
           </div>
 
           <div className="lg:col-span-4 h-fit border lg:sticky top-5 bg-white rounded-3xl shadow-lg order-1 lg:order-2 backdrop-blur-sm">
-            <div className="md:p-8 p-4">
+            <div className="md:p-6 p-4">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-2 h-8 bg-gradient-to-b from-primary to-primary/60 rounded-full"></div>
                 <h2 className="text-lg font-semibold text-black font-montserrat">DTP Request Summary</h2>
@@ -185,7 +185,7 @@ function Products() {
                       const product = sampleProducts.find(p => p.id === parseInt(id));
                       return (
                         <li key={id} className="group">
-                          <div className="flex items-center gap-3 p-4 rounded-2xl border border-gray-100 hover:border-primary/20 hover:bg-primary/5 transition-all duration-200">
+                          <div className="flex items-center gap-2 p-2 rounded-2xl border border-gray-100 hover:border-primary/20 hover:bg-primary/5 transition-all duration-200">
                             <img src={product?.image} alt={product?.name} className="w-12 h-12 object-contain rounded-lg border" />
                             <div className="flex-1 min-w-0">
                               <h3 className="font-semibold text-gray-900 truncate">{product?.name}</h3>
